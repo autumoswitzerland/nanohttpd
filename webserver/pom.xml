@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.nanohttpd</groupId>
 		<artifactId>nanohttpd-project</artifactId>
-		<version>BEETROOT-2.3.5</version>
+		<version>BEETROOT-2.3.6</version>
 	</parent>
 	<artifactId>nanohttpd-webserver</artifactId>
 	<packaging>jar</packaging>

@@ -3,22 +3,22 @@
 	<parent>
 		<groupId>org.nanohttpd</groupId>
 		<artifactId>nanohttpd-project</artifactId>
-		<version>BEETROOT-2.3.5</version>
+		<version>BEETROOT-2.3.6</version>
 	</parent>
-	
+
 	<artifactId>nanohttpd</artifactId>
 	<packaging>jar</packaging>
 	<name>NanoHttpd-Core</name>
-	
+
 	<properties>
-	
+
 		<minimal.coverage>0.82</minimal.coverage>
-	
+
 		<version.httpclient>4.5.14</version.httpclient>
 		<version.httpmime>4.5.14</version.httpmime>
-		
+
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
@@ -33,5 +33,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 </project>

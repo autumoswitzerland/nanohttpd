@@ -8,18 +8,18 @@ package org.nanohttpd.protocols.http;
  * %%
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
- * 
+ *
  * 1. Redistributions of source code must retain the above copyright notice, this
  *    list of conditions and the following disclaimer.
- * 
+ *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
  *    this list of conditions and the following disclaimer in the documentation
  *    and/or other materials provided with the distribution.
- * 
+ *
  * 3. Neither the name of the nanohttpd nor the names of its contributors
  *    may be used to endorse or promote products derived from this software without
  *    specific prior written permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
  * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
  * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
@@ -555,7 +555,7 @@ public class HTTPSession implements IHTTPSession {
         return this.method;
     }
 
-    /** patched: autumo-beetroot */ 
+    /** patched: autumo-beetroot */
     /**
      * nope@deprecated use {@link #getParameters()} instead.
      */
@@ -687,12 +687,14 @@ public class HTTPSession implements IHTTPSession {
                 ByteBuffer src = b.duplicate();
                 fileOutputStream = new FileOutputStream(tempFile.getName());
                 FileChannel dest = fileOutputStream.getChannel();
-                
-                // hack, to make sure java 1.8 is used - known issue
+
+                // Old hack when java 1.8 was used - known issue
                 // see: https://www.morling.dev/blog/bytebuffer-and-the-dreaded-nosuchmethoderror/
-                ((java.nio.Buffer) src).position(offset).limit(offset + len);
-                //src.position(offset).limit(offset + len);
-                
+                // ((java.nio.Buffer) src).position(offset).limit(offset + len);
+
+                // Java 9+
+                src.position(offset).limit(offset + len);
+
                 dest.write(src.slice());
                 path = tempFile.getName();
             } catch (Exception e) { // Catch exception if any
@@ -708,5 +710,5 @@ public class HTTPSession implements IHTTPSession {
     public String getRemoteIpAddress() {
         return this.remoteIp;
     }
-    
+
 }

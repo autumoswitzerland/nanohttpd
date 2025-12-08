@@ -3,8 +3,8 @@
 	<parent>
 		<groupId>org.nanohttpd</groupId>
 		<artifactId>nanohttpd-project</artifactId>
-		<version>BEETROOT-2.3.5</version>
-		<relativePath>../</relativePath>		
+		<version>BEETROOT-2.3.6</version>
+		<relativePath>../</relativePath>
 	</parent>
 	<artifactId>nanohttpd-samples</artifactId>
 	<description>samples for nanohttpd</description>
