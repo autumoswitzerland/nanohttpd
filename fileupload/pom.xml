@@ -13,7 +13,7 @@
 		<dependency>
 			<groupId>org.nanohttpd</groupId>
 			<artifactId>nanohttpd</artifactId>
-			<version>BEETROOT-2.3.5</version>
+			<version>BEETROOT-2.3.6</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
