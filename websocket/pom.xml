@@ -14,7 +14,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.4.0</version>
+				<version>${version.maven.jar.plugin}</version>
 				<executions>
 					<execution>
 						<id>default-jar</id>
@@ -53,13 +53,13 @@
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
-			<version>1.9.5</version>
+			<version>${version.mockito.all}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty.websocket</groupId>
 			<artifactId>websocket-client</artifactId>
-			<version>9.3.0.M2</version>
+			<version>${version.websocket.client}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
